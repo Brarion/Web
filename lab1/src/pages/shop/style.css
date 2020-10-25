@@ -1,0 +1,49 @@
+main form {
+  font-size: 14px;
+  color: #b8b6b4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 100px;
+  margin-bottom: 50px;
+}
+
+main form div {
+  width: 100%;
+}
+
+main .games {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+p {
+  width: auto;
+  display: inline;
+}
+
+main a, main a:hover {
+  color: #67c1f5;
+  text-align: right;
+}
+
+main a:active {
+  color: #a2a0a2;
+}
+
+
+span {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

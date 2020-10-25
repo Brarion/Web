@@ -1,0 +1,32 @@
+header {
+  font-size: 20px;
+  color: #b8b6b4;
+}
+
+.navbar {
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+}
+
+.shop {
+  margin: 0 auto 0 50px;
+}
+
+@media screen and (max-width: 768px){
+  .navbar {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:  1fr;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 20px 0;
+  }
+
+  .navbar > * {
+    margin: 0 auto;
+  }
+}
