@@ -2,7 +2,7 @@
 
 Проект: копия Steam.
 
-[Посмотреть без скачивания](weblab1.netlify.app)
+[Посмотреть без скачивания](https://weblab1.netlify.app/)
 
 1. [HTML](http://htmlbook.ru/html)
 2. [CSS](http://htmlbook.ru/css)
