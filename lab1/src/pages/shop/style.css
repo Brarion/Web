@@ -17,8 +17,6 @@ main form div {
 main .games {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
-  align-items: center;
   gap: 100px;
 }
 
@@ -46,4 +44,30 @@ span {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+
+@media screen and (max-width: 1140px){
+  main form {
+    gap: 50px;
+  }
+
+  main .games {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  main form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  main .games {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
