@@ -10,9 +10,9 @@ const ShopPage = () => {
   return (
     <div className={s.wrapper}>
       <form className={s.form} noValidate autoComplete="off">
-        <input type="text" placeholder="Игра"/>
-        <input type="text" placeholder="Разработчик"/>
-        <input type="text" placeholder="Издатель"/>
+        <input type="text" placeholder="Игра" className="form-control"/>
+        <input type="text" placeholder="Разработчик" className="form-control"/>
+        <input type="text" placeholder="Издатель" className="form-control"/>
       </form>
       <div className={s.cardWrapper}>
         {games.map((game) =>
