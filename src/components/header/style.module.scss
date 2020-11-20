@@ -1,0 +1,51 @@
+.header {
+  min-height: 100px;
+
+  display: flex;
+  justify-content: center;
+
+  .nav {
+    width: calc(100% / 12 * 10 - 2 * 16px);
+
+    min-height: inherit;
+
+    display: flex;
+    align-items: center;
+
+    .link {
+      color: #b8b6b4;
+
+      text-decoration: none;
+
+      &.shop {
+        margin: 0 auto 0 50px;
+      }
+
+      &.img {
+        height: 44px;
+      }
+
+      &:active {
+        color: #a2a0a2;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns:  1fr;
+      align-content: center;
+      justify-content: center;
+      gap: 20px;
+
+      padding: 20px 0;
+    }
+
+    .nav > *, .nav .link + .shop {
+      margin: 0 auto;
+    }
+  }
+
+}

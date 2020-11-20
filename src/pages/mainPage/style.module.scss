@@ -1,0 +1,9 @@
+.carousel, .item {
+  height: calc(100vh - 100px);
+}
+
+@media screen and (max-width: 768px) {
+  .carousel, .item {
+    height: auto;
+  }
+}
