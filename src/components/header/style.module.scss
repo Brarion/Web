@@ -12,6 +12,8 @@
     display: flex;
     align-items: center;
 
+    color: #b8b6b4;
+
     .link {
       color: #b8b6b4;
 
@@ -29,6 +31,14 @@
         color: #a2a0a2;
       }
     }
+
+    > span {
+      margin-right: 20px;
+    }
+
+    .notEnoughMoney {
+      color: red;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -41,6 +51,10 @@
       gap: 20px;
 
       padding: 20px 0;
+
+      > span {
+        margin: 0 auto;
+      }
     }
 
     .nav > *, .nav .link + .shop {
