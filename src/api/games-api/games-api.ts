@@ -1,5 +1,5 @@
 import {http} from '../http'
-import {TBuyGame, TGame, TGameWithImage, TGetGames} from "./types";
+import {TBuyGame, TGame, TGameWithImage, TGetGames, TGetPreview} from "./types";
 import {TCache} from "../user-api";
 
 export const gamesApi = {
@@ -41,6 +41,23 @@ export const gamesApi = {
         }
       })
     )
+  },
+
+  getPreviewById: async (data: TGetPreview): Promise<string> => {
+    const res = await http.get(`games/${data.id}/preview`, {
+      responseType: 'arraybuffer',
+      headers: {'Cache-Control': 'no-cache'},
+    })
+
+    const type = res.headers['content-type']
+    const encoded = Buffer.from(res.data, 'binary').toString('base64')
+
+    return `data:${type};base64,${encoded}`
+  },
+
+  getById: async (id: number): Promise<TGame> => {
+    const res = await http.get(`games/${id}`)
+    return res.data
   },
 
   buyGame: async (data: TBuyGame): Promise<TCache> => {

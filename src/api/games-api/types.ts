@@ -31,3 +31,8 @@ export type TBuyGame = {
   id: number
   token: string
 }
+
+export type TGetPreview = {
+  id: number
+  token: string
+}

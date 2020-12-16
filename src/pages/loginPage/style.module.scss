@@ -5,6 +5,8 @@
   width: calc(100% / 12 * 4 - 2 * 16px);
   margin: 0 auto 10px auto;
 
+  height: calc(100vh - 100px);
+
   .input {
     margin-bottom: 1rem;
   }

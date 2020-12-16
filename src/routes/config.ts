@@ -1,10 +1,10 @@
-import {lazy} from 'react'
+import React, {lazy} from 'react'
 import {AppRoute} from "./types";
 
-const MainPage = lazy(() => import('../pages/mainPage/mainPage'));
-const LoginPage = lazy(() => import('../pages/loginPage/loginPage'));
-const ShopPage = lazy(() => import('../pages/shopPage/shopPage'));
-const GamePage = lazy(() => import('../pages/gamePage/gamePage'));
+const MainPage: React.LazyExoticComponent<any> = lazy(() => import('../pages/mainPage/mainPage'));
+const LoginPage: React.LazyExoticComponent<any> = lazy(() => import('../pages/loginPage/loginPage'));
+const ShopPage: React.LazyExoticComponent<any> = lazy(() => import('../pages/shopPage/shopPage'));
+const GamePage: React.LazyExoticComponent<any> = lazy(() => import('../pages/gamePage/gamePage'));
 
 export const routes: AppRoute[] = [
   {
@@ -27,7 +27,7 @@ export const routes: AppRoute[] = [
   },
   {
     title: 'Игра',
-    path: '/game',
+    path: '/game/:id',
     component: GamePage,
     exact: true,
   },

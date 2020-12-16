@@ -24,16 +24,16 @@ const MainPage = () => {
   }, [])
 
   return (
-      <Carousel className={s.carousel} activeIndex={index} onSelect={(v) => handleSelect(v)}>
-        {foundGames.map((game, index) => <Carousel.Item className={s.item}>
-          <img
-            className={`${s.image} d-block w-100`}
-            src={game.image}
-            alt={game.name}
-            onClick={() => gameService.openGame(index)}
-          />
-        </Carousel.Item>)}
-      </Carousel>
+    <Carousel className={s.carousel} activeIndex={index} onSelect={(v) => handleSelect(v)}>
+      {foundGames.map((game) => <Carousel.Item key={game.id} className={s.item}>
+        <img
+          className={`${s.image} d-block w-100`}
+          src={game.image}
+          alt={game.name}
+          onClick={() => gameService.openGame(game.id)}
+        />
+      </Carousel.Item>)}
+    </Carousel>
   )
 }
 

@@ -33,8 +33,8 @@ const ShopPage = () => {
       </form>
       {foundGames.length > 0 ?
         <div className={s.cardWrapper}>
-          {foundGames.map((game, index) => {
-            return <Card key={game.name} className={s.card} onClick={() => gameService.openGame(index)}>
+          {foundGames.map((game) => {
+            return <Card key={game.id} className={s.card} onClick={() => gameService.openGame(game.id)}>
               <Card.Img variant="top" src={game.image}/>
               <Card.Body>
                 <div className={s.cardPartWrapper}>
